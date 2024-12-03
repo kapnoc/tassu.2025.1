@@ -1,0 +1,243 @@
+%10MB
+
+\documentclass[10pt,finnish,a5paper]{scrartcl}
+
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage{babel}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{wallpaper}
+\usepackage{lipsum}
+\usepackage[labelformat=empty]{caption}
+\usepackage[export]{adjustbox}
+\usepackage{calc}
+\usepackage{pstricks}
+\usepackage{contour}
+\usepackage{multirow}
+\contourlength{2pt}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{\textbf{LUONNOS}}
+\SetWatermarkScale{1}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\definecolor{link}{HTML}{f7941e}
+
+\RedeclareSectionCommands[tocraggedentrytext]{section}
+
+\setlength{\RaggedRightParindent}{\parindent}
+\RaggedRight
+\setmainfont[Ligatures=TeX]{Ubuntu}
+\newfontfamily\monofont{Ubuntu Mono}
+\definecolor{kuru}{HTML}{f7941e}
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+\addto\captionsfinnish{\renewcommand{\contentsname}{Tässä numerossa}}
+\addtokomafont{sectionentry}{\normalfont}
+\addtokomafont{disposition}{\rmfamily\color{kuru}}
+\addtokomafont{caption}{\footnotesize}
+\setkomafont{subsection}{\normalfont\itshape}
+\setenumerate{leftmargin=*}
+\setitemize{leftmargin=*}
+\frenchspacing
+\def\UrlBreaks{\do\/\do-}
+
+\usepackage[automark, autooneside=false]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\setkomafont{pageheadfoot}{}% not special font for page head and foot
+% \clearpairofpagestyles
+% \ihead{\leftmark}
+% \ohead{\Ifstr{\leftmark}{\rightbotmark}{}{\rightbotmark}}
+% \ohead{\Ifstr{\rightbotmark}{\leftmark}{}{\leftmark}}
+\ihead{}
+\chead{}
+\ohead{\color{kuru}\rightmark}
+% \ihead{\headmark}
+% \markright{
+% }
+\cfoot{\pagemark}
+
+% Packages needed:
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\newtcolorbox{kuruboxtitle}[1][]{%
+    enhanced,
+    before skip=0mm,after skip=0mm, 
+    width=1\textwidth, boxrule=0mm,
+    colback=kuru, colframe=kuru, % Colors
+    sharp corners,
+    underlay={%
+	    \fill[kuru] ([xshift=-10mm,yshift=2mm]frame.north west) -- ([xshift=8mm]frame.north east)
+	    -- ([xshift=10mm,yshift=-2mm]frame.south east) -- ([xshift=-8mm]frame.south west)
+	    -- cycle;
+	    \fill[white] ([xshift=-6mm,yshift=-2mm]frame.north west) ellipse (1mm and 2mm);
+	    \fill[white] ([xshift=-3mm,yshift=-2mm]frame.north west) ellipse (1mm and 2mm);
+	    \fill[white] ([xshift=-4.5mm,yshift=-6mm]frame.north west) circle (1mm);
+	    \fill[white] ([xshift=-4.5mm,yshift=-9mm]frame.north west) circle (1mm);
+        },
+    % drop fuzzy shadow, % Shadow
+    title={#1},
+}
+
+\usepackage{titlesec}
+\titleformat
+{\section} % command
+[display] % shape
+{\bfseries\Large} % format
+{\thechapter} % label
+{0.5ex} % sep
+{
+	\clearpage
+	\thispagestyle{plain}
+	\begin{center}
+		\begin{kuruboxtitle}[]
+			\color{white}
+} % before-code
+[
+		\end{kuruboxtitle}
+	\end{center}
+] % after-code
+
+\usepackage[colorlinks,linkcolor=black,urlcolor=link]{hyperref}
+\renewcommand{\theHsection}{\thepart.section.\thesection}
+\urlstyle{same}
+
+\begin{document}
+\thispagestyle{empty}
+\newgeometry{left=1cm}
+
+% \ThisCenterWallPaper{1.10}{assets/no_auto_compression/kansikuva}
+
+\vspace*{5.70cm}
+
+{\noindent\color{kuru}\begin{tabular}{@{}c@{}}
+\includegraphics[width=6cm]{assets/no_auto_compression/logo} \\
+\\
+
+\newtcolorbox{kuruboxfrontpage}[1][]{%
+    enhanced,
+    before skip=0mm,after skip=0mm, 
+    width=0.6\textwidth, boxrule=0mm,
+    colback=kuru, colframe=kuru, % Colors
+    sharp corners,
+    underlay={%
+	    \fill[kuru] ([xshift=-8mm,yshift=3mm]frame.north west) -- ([yshift=1mm]frame.north east)
+	    -- ([xshift=1mm,yshift=-3mm]frame.south east) -- ([xshift=-7mm,yshift=-1mm]frame.south west)
+	    -- cycle;
+	    \fill[white] ([xshift=-4mm,yshift=-1mm]frame.north west) ellipse (1mm and 2mm);
+	    \fill[white] ([xshift=-1mm,yshift=-1mm]frame.north west) ellipse (1mm and 2mm);
+	    \fill[white] ([xshift=-2.5mm,yshift=-5mm]frame.north west) circle (1mm);
+	    \fill[white] ([xshift=-2.5mm,yshift=-8mm]frame.north west) circle (1mm);
+        },
+    % drop fuzzy shadow, % Shadow
+    title={#1},
+}
+\begin{kuruboxfrontpage}[]
+	\color{white}{\large\bfseries 1/2025 Kurkisuon Rusakot ry}
+\end{kuruboxfrontpage}
+% \contour{white}{\large\bfseries 1/2024 Kurkisuon Rusakot ry}
+\end{tabular}\par}
+
+\clearpage
+\restoregeometry
+\thispagestyle{plain}
+
+% \ThisULCornerWallPaper{1}{assets/no_auto_compression/sisäkansikuva.jpg}
+
+\noindent \textbf{Tassu 1/2025} \\
+\noindent ISSN 0783-1536
+
+\vfill
+
+% \begin{multicols}{2}
+\noindent\textbf{Päätoimittaja:}
+
+Tanguy Gérôme
+
+\href{mailto:tanguy@gerome.fi}{tanguy@gerome.fi}
+
+\medskip
+
+\noindent\textbf{Julkaisija:}
+
+Kurkisuon Rusakot ry, Helsinki
+
+\medskip
+
+\noindent Tarkista lippukunnan ajankohtaiset yhteystiedot nettisivuilta:
+
+\href{https://kurkisuonrusakot.wordpress.com/}{kurkisuonrusakot.wordpress.com}
+
+\medskip
+
+\noindent Etu- ja sisäkannen kuvat:
+
+xxx
+
+\noindent Takakannen kuva:
+
+xxx
+
+% \columnbreak
+\vspace{0.64cm}
+
+\tableofcontents
+% \end{multicols}
+
+\include{chapters/lpkjohtajantervehdys.tex}
+
+\include{chapters/tassuennenvahnaan.tex}
+
+% \section{Muistoja vuodelta 2023: Johtajien kansallispuistokierros Ruotsissa}
+% \section{Muistoja vuodelta 2024: Uikun uinti -vaellus 26.–30.6.}
+
+% \include{chapters/kuvakilpailu.tex}
+
+% \clearpage\section{Tulossa pian}
+
+
+\clearpage
+
+\thispagestyle{empty}
+% \ThisCenterWallPaper{1.07}{assets/no_auto_compression/takakansikuva.jpg}~
+
+\vfill
+
+\newtcolorbox{kuruboxendpage}[1][]{%
+    enhanced,
+    before skip=0mm,after skip=0mm, 
+    width=0.68\textwidth, boxrule=0mm,
+    colback=kuru, colframe=kuru, % Colors
+    sharp corners,
+    underlay={%
+	    \fill[kuru] ([xshift=-8mm,yshift=3mm]frame.north west) -- ([yshift=1mm]frame.north east)
+	    -- ([xshift=1mm,yshift=-3mm]frame.south east) -- ([xshift=-7mm,yshift=-1mm]frame.south west)
+	    -- cycle;
+	    \fill[white] ([xshift=-4mm,yshift=-1mm]frame.north west) ellipse (1mm and 2mm);
+	    \fill[white] ([xshift=-1mm,yshift=-1mm]frame.north west) ellipse (1mm and 2mm);
+	    \fill[white] ([xshift=-2.5mm,yshift=-5mm]frame.north west) circle (1mm);
+	    \fill[white] ([xshift=-2.5mm,yshift=-8mm]frame.north west) circle (1mm);
+        },
+    % drop fuzzy shadow, % Shadow
+    title={#1},
+}
+
+{
+	\noindent
+	\begin{addmargin}[0.32cm]{0cm}
+		\begin{center}
+			\begin{kuruboxendpage}[]
+				\color{white}{\Large\bfseries 1/2025 Kurkisuon Rusakot ry}
+			\end{kuruboxendpage}
+		\end{center}
+	\end{addmargin}
+}
+\end{document}
