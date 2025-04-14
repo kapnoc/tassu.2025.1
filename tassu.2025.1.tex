@@ -19,6 +19,7 @@
 \usepackage{pstricks}
 \usepackage{contour}
 \usepackage{multirow}
+\usepackage{makecell}
 \contourlength{2pt}
 
 \usepackage{draftwatermark}
@@ -64,6 +65,56 @@
 % \markright{
 % }
 \cfoot{\pagemark}
+
+\newcommand{\dit}{\raisebox{0.47ex}{.}}
+\newcommand{\dah}{\raisebox{-0.0ex}{\textbf{-}}}
+\newcommand{\daaah}[1]{\raisebox{0.64ex}{\rule{#1}{2pt}}}
+
+\usepackage{listings}
+\newcommand{\morse}[1]{\
+	\lstset{
+		basicstyle=\Large,
+		literate={A}{\dit\dah}3{B}{\dah\dit\dit\dit}3{C}{\dah\dit\dah\dit}4
+			{D}{\dah\dit\dit}3{E}{\dit}2{F}{\dit\dit\dah\dit}3
+			{G}{\dah\dah\dit}4{H}{\dit\dit\dit\dit}3{I}{\dit\dit}2
+			{J}{\dit\dah\dah\dah}4{K}{\dah\dit\dah}3{L}{\dit\dah\dit\dit}3
+			{M}{\dah\dah}3{N}{\dah\dit}2{O}{\dah\dah\dah}4
+			{P}{\dit\dah\dah\dit}4{Q}{\dah\dah\dit\dah}4{R}{\dit\dah\dit}3
+			{S}{\dit\dit\dit}3{T}{\dah}2{U}{\dit\dit\dah}3
+			{V}{\dit\dit\dit\dah}3{W}{\dit\dah\dah}4{X}{\dah\dit\dit\dah}3
+			{Y}{\dah\dit\dah\dah}4{Z}{\dah\dah\dit\dit}3{Å}{\dit\dah\dah\dit\dah}5
+			{Ä}{\dit\dah\dit\dah}4{Ö}{\dah\dah\dah\dit}4{0}{\dah\dah\dah\dah\dah}5
+			{1}{\dit\dah\dah\dah\dah}5{2}{\dit\dit\dah\dah\dah}5{3}{\dit\dit\dit\dah\dah}5
+			{4}{\dit\dit\dit\dit\dah}4{5}{\dit\dit\dit\dit\dit}4{6}{\dah\dit\dit\dit\dit}4
+			{7}{\dah\dah\dit\dit\dit}5{8}{\dah\dah\dah\dit\dit}5{9}{\dah\dah\dah\dah\dit}5
+			{?}{\dit\dit\dah\dah\dit\dit}5{/}{\dah\dit\dit\dah\dit}5{=}{\dah\dit\dit\dit\dah}4
+			{:}{\dah\dah\dah\dit\dit\dit}5{,}{\dah\dah\dit\dit\dah\dah}5{.}{\dit\dah\dit\dah\dit\dah}5
+			% {}{}4{}{}4{}{}4
+	}
+	\lstinline{#1}
+}
+\newcommand{\morseprosign}[1]{\
+	\lstset{
+		basicstyle=\Large,
+		literate={A}{\dit\dah}1{B}{\dah\dit\dit\dit}1{C}{\dah\dit\dah\dit}1
+			{D}{\dah\dit\dit}1{E}{\dit}1{F}{\dit\dit\dah\dit}1
+			{G}{\dah\dah\dit}1{H}{\dit\dit\dit\dit}1{I}{\dit\dit}1
+			{J}{\dit\dah\dah\dah}1{K}{\dah\dit\dah}1{L}{\dit\dah\dit\dit}1
+			{M}{\dah\dah}1{N}{\dah\dit}1{O}{\dah\dah\dah}1
+			{P}{\dit\dah\dah\dit}1{Q}{\dah\dah\dit\dah}1{R}{\dit\dah\dit}1
+			{S}{\dit\dit\dit}1{T}{\dah}1{U}{\dit\dit\dah}1
+			{V}{\dit\dit\dit\dah}1{W}{\dit\dah\dah}1{X}{\dah\dit\dit\dah}1
+			{Y}{\dah\dit\dah\dah}1{Z}{\dah\dah\dit\dit}1{Å}{\dit\dah\dah\dit\dah}1
+			{Ä}{\dit\dah\dit\dah}1{Ö}{\dah\dah\dah\dit}1{0}{\dah\dah\dah\dah\dah}1
+			{1}{\dit\dah\dah\dah\dah}1{2}{\dit\dit\dah\dah\dah}1{3}{\dit\dit\dit\dah\dah}1
+			{4}{\dit\dit\dit\dit\dah}1{5}{\dit\dit\dit\dit\dit}1{6}{\dah\dit\dit\dit\dit}1
+			{7}{\dah\dah\dit\dit\dit}1{8}{\dah\dah\dah\dit\dit}1{9}{\dah\dah\dah\dah\dit}1
+			{?}{\dit\dit\dah\dah\dit\dit}1{/}{\dah\dit\dit\dah\dit}1{=}{\dah\dah\dah\dit\dit\dit}1
+			{:}{\dah\dah\dah\dit\dit\dit}1{,}{\dah\dah\dit\dit\dah\dah}1{.}{\dit\dah\dit\dah\dit\dah}1
+			% {}{}4{}{}4{}{}4
+	}
+	\lstinline{#1}
+}
 
 % Packages needed:
 \usepackage{tikz}
@@ -204,6 +255,8 @@ xxx
 % \section{Muistoja vuodelta 2024: Uikun uinti -vaellus 26.–30.6.}
 
 \include{chapters/elaintenJouluMeriharjussa.tex}
+
+\include{chapters/morse.tex}
 
 % \include{chapters/kuvakilpailu.tex}
 
