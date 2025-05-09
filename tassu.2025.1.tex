@@ -157,6 +157,28 @@
 	\end{center}
 ] % after-code
 
+\titleformat
+{\subsection} % command
+[display] % shape
+{\bfseries\large} % format
+{\thechapter} % label
+{0.32cm} % sep
+{
+} % before-code
+[
+] % after-code
+
+\titleformat
+{\subsubsection} % command
+[display] % shape
+{\bfseries} % format
+{\thechapter} % label
+{0.16cm} % sep
+{
+} % before-code
+[
+] % after-code
+
 \usepackage[colorlinks,linkcolor=black,urlcolor=link]{hyperref}
 \renewcommand{\theHsection}{\thepart.section.\thesection}
 \urlstyle{same}
@@ -258,6 +280,8 @@ xxx
 
 % \section{Muistoja vuodelta 2023: Johtajien kansallispuistokierros Ruotsissa}
 % \section{Muistoja vuodelta 2024: Uikun uinti -vaellus 26.–30.6.}
+
+\include{chapters/johtajarusakot.tex}
 
 \include{chapters/elaintenJouluMeriharjussa.tex}
 
