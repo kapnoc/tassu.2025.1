@@ -66,55 +66,55 @@
 % }
 \cfoot{\pagemark}
 
-\newcommand{\dit}{\raisebox{0.47ex}{.}}
-\newcommand{\dah}{\raisebox{-0.0ex}{\textbf{-}}}
-\newcommand{\daaah}[1]{\raisebox{0.64ex}{\rule{#1}{2pt}}}
+% \newcommand{\dit}{\raisebox{0.47ex}{.}}
+% \newcommand{\dah}{\raisebox{-0.0ex}{\textbf{-}}}
+% \newcommand{\daaah}[1]{\raisebox{0.64ex}{\rule{#1}{2pt}}}
 
-\usepackage{listings}
-\newcommand{\morse}[1]{\
-	\lstset{
-		basicstyle=\Large,
-		literate={A}{\dit\dah}3{B}{\dah\dit\dit\dit}3{C}{\dah\dit\dah\dit}4
-			{D}{\dah\dit\dit}3{E}{\dit}2{F}{\dit\dit\dah\dit}3
-			{G}{\dah\dah\dit}4{H}{\dit\dit\dit\dit}3{I}{\dit\dit}2
-			{J}{\dit\dah\dah\dah}4{K}{\dah\dit\dah}3{L}{\dit\dah\dit\dit}3
-			{M}{\dah\dah}3{N}{\dah\dit}2{O}{\dah\dah\dah}4
-			{P}{\dit\dah\dah\dit}4{Q}{\dah\dah\dit\dah}4{R}{\dit\dah\dit}3
-			{S}{\dit\dit\dit}3{T}{\dah}2{U}{\dit\dit\dah}3
-			{V}{\dit\dit\dit\dah}3{W}{\dit\dah\dah}4{X}{\dah\dit\dit\dah}3
-			{Y}{\dah\dit\dah\dah}4{Z}{\dah\dah\dit\dit}3{Å}{\dit\dah\dah\dit\dah}5
-			{Ä}{\dit\dah\dit\dah}4{Ö}{\dah\dah\dah\dit}4{0}{\dah\dah\dah\dah\dah}5
-			{1}{\dit\dah\dah\dah\dah}5{2}{\dit\dit\dah\dah\dah}5{3}{\dit\dit\dit\dah\dah}5
-			{4}{\dit\dit\dit\dit\dah}4{5}{\dit\dit\dit\dit\dit}4{6}{\dah\dit\dit\dit\dit}4
-			{7}{\dah\dah\dit\dit\dit}5{8}{\dah\dah\dah\dit\dit}5{9}{\dah\dah\dah\dah\dit}5
-			{?}{\dit\dit\dah\dah\dit\dit}5{/}{\dah\dit\dit\dah\dit}5{=}{\dah\dit\dit\dit\dah}4
-			{:}{\dah\dah\dah\dit\dit\dit}5{,}{\dah\dah\dit\dit\dah\dah}5{.}{\dit\dah\dit\dah\dit\dah}5
-			% {}{}4{}{}4{}{}4
-	}
-	\lstinline{#1}
-}
-\newcommand{\morseprosign}[1]{\
-	\lstset{
-		basicstyle=\Large,
-		literate={A}{\dit\dah}1{B}{\dah\dit\dit\dit}1{C}{\dah\dit\dah\dit}1
-			{D}{\dah\dit\dit}1{E}{\dit}1{F}{\dit\dit\dah\dit}1
-			{G}{\dah\dah\dit}1{H}{\dit\dit\dit\dit}1{I}{\dit\dit}1
-			{J}{\dit\dah\dah\dah}1{K}{\dah\dit\dah}1{L}{\dit\dah\dit\dit}1
-			{M}{\dah\dah}1{N}{\dah\dit}1{O}{\dah\dah\dah}1
-			{P}{\dit\dah\dah\dit}1{Q}{\dah\dah\dit\dah}1{R}{\dit\dah\dit}1
-			{S}{\dit\dit\dit}1{T}{\dah}1{U}{\dit\dit\dah}1
-			{V}{\dit\dit\dit\dah}1{W}{\dit\dah\dah}1{X}{\dah\dit\dit\dah}1
-			{Y}{\dah\dit\dah\dah}1{Z}{\dah\dah\dit\dit}1{Å}{\dit\dah\dah\dit\dah}1
-			{Ä}{\dit\dah\dit\dah}1{Ö}{\dah\dah\dah\dit}1{0}{\dah\dah\dah\dah\dah}1
-			{1}{\dit\dah\dah\dah\dah}1{2}{\dit\dit\dah\dah\dah}1{3}{\dit\dit\dit\dah\dah}1
-			{4}{\dit\dit\dit\dit\dah}1{5}{\dit\dit\dit\dit\dit}1{6}{\dah\dit\dit\dit\dit}1
-			{7}{\dah\dah\dit\dit\dit}1{8}{\dah\dah\dah\dit\dit}1{9}{\dah\dah\dah\dah\dit}1
-			{?}{\dit\dit\dah\dah\dit\dit}1{/}{\dah\dit\dit\dah\dit}1{=}{\dah\dah\dah\dit\dit\dit}1
-			{:}{\dah\dah\dah\dit\dit\dit}1{,}{\dah\dah\dit\dit\dah\dah}1{.}{\dit\dah\dit\dah\dit\dah}1
-			% {}{}4{}{}4{}{}4
-	}
-	\lstinline{#1}
-}
+% \usepackage{listings}
+% \newcommand{\morse}[1]{\
+% 	\lstset{
+% 		basicstyle=\Large,
+% 		literate={A}{\dit\dah}3{B}{\dah\dit\dit\dit}3{C}{\dah\dit\dah\dit}4
+% 			{D}{\dah\dit\dit}3{E}{\dit}2{F}{\dit\dit\dah\dit}3
+% 			{G}{\dah\dah\dit}4{H}{\dit\dit\dit\dit}3{I}{\dit\dit}2
+% 			{J}{\dit\dah\dah\dah}4{K}{\dah\dit\dah}3{L}{\dit\dah\dit\dit}3
+% 			{M}{\dah\dah}3{N}{\dah\dit}2{O}{\dah\dah\dah}4
+% 			{P}{\dit\dah\dah\dit}4{Q}{\dah\dah\dit\dah}4{R}{\dit\dah\dit}3
+% 			{S}{\dit\dit\dit}3{T}{\dah}2{U}{\dit\dit\dah}3
+% 			{V}{\dit\dit\dit\dah}3{W}{\dit\dah\dah}4{X}{\dah\dit\dit\dah}3
+% 			{Y}{\dah\dit\dah\dah}4{Z}{\dah\dah\dit\dit}3{Å}{\dit\dah\dah\dit\dah}5
+% 			{Ä}{\dit\dah\dit\dah}4{Ö}{\dah\dah\dah\dit}4{0}{\dah\dah\dah\dah\dah}5
+% 			{1}{\dit\dah\dah\dah\dah}5{2}{\dit\dit\dah\dah\dah}5{3}{\dit\dit\dit\dah\dah}5
+% 			{4}{\dit\dit\dit\dit\dah}4{5}{\dit\dit\dit\dit\dit}4{6}{\dah\dit\dit\dit\dit}4
+% 			{7}{\dah\dah\dit\dit\dit}5{8}{\dah\dah\dah\dit\dit}5{9}{\dah\dah\dah\dah\dit}5
+% 			{?}{\dit\dit\dah\dah\dit\dit}5{/}{\dah\dit\dit\dah\dit}5{=}{\dah\dit\dit\dit\dah}4
+% 			{:}{\dah\dah\dah\dit\dit\dit}5{,}{\dah\dah\dit\dit\dah\dah}5{.}{\dit\dah\dit\dah\dit\dah}5
+% 			% {}{}4{}{}4{}{}4
+% 	}
+% 	\lstinline{#1}
+% }
+% \newcommand{\morseprosign}[1]{\
+% 	\lstset{
+% 		basicstyle=\Large,
+% 		literate={A}{\dit\dah}1{B}{\dah\dit\dit\dit}1{C}{\dah\dit\dah\dit}1
+% 			{D}{\dah\dit\dit}1{E}{\dit}1{F}{\dit\dit\dah\dit}1
+% 			{G}{\dah\dah\dit}1{H}{\dit\dit\dit\dit}1{I}{\dit\dit}1
+% 			{J}{\dit\dah\dah\dah}1{K}{\dah\dit\dah}1{L}{\dit\dah\dit\dit}1
+% 			{M}{\dah\dah}1{N}{\dah\dit}1{O}{\dah\dah\dah}1
+% 			{P}{\dit\dah\dah\dit}1{Q}{\dah\dah\dit\dah}1{R}{\dit\dah\dit}1
+% 			{S}{\dit\dit\dit}1{T}{\dah}1{U}{\dit\dit\dah}1
+% 			{V}{\dit\dit\dit\dah}1{W}{\dit\dah\dah}1{X}{\dah\dit\dit\dah}1
+% 			{Y}{\dah\dit\dah\dah}1{Z}{\dah\dah\dit\dit}1{Å}{\dit\dah\dah\dit\dah}1
+% 			{Ä}{\dit\dah\dit\dah}1{Ö}{\dah\dah\dah\dit}1{0}{\dah\dah\dah\dah\dah}1
+% 			{1}{\dit\dah\dah\dah\dah}1{2}{\dit\dit\dah\dah\dah}1{3}{\dit\dit\dit\dah\dah}1
+% 			{4}{\dit\dit\dit\dit\dah}1{5}{\dit\dit\dit\dit\dit}1{6}{\dah\dit\dit\dit\dit}1
+% 			{7}{\dah\dah\dit\dit\dit}1{8}{\dah\dah\dah\dit\dit}1{9}{\dah\dah\dah\dah\dit}1
+% 			{?}{\dit\dit\dah\dah\dit\dit}1{/}{\dah\dit\dit\dah\dit}1{=}{\dah\dah\dah\dit\dit\dit}1
+% 			{:}{\dah\dah\dah\dit\dit\dit}1{,}{\dah\dah\dit\dit\dah\dah}1{.}{\dit\dah\dit\dah\dit\dah}1
+% 			% {}{}4{}{}4{}{}4
+% 	}
+% 	\lstinline{#1}
+% }
 
 % Packages needed:
 \usepackage{tikz}
@@ -185,20 +185,38 @@
 
 \begin{document}
 \thispagestyle{empty}
-\newgeometry{left=1cm}
+\newgeometry{left=2cm,bottom=0cm}
 
-% \ThisCenterWallPaper{1.10}{assets/no_auto_compression/kansikuva}
+\ThisCenterWallPaper{1.08}{assets/no_auto_compression/kansikuva}
 
-\vspace*{5.70cm}
+% \vspace*{1.28cm}
+\vspace*{11cm}
 
-{\noindent\color{kuru}\begin{tabular}{@{}c@{}}
-\includegraphics[width=6cm]{assets/no_auto_compression/logo} \\
-\\
+\newtcolorbox{logowhitebox}[1][]{%
+    enhanced,
+    before skip=0mm,after skip=0mm, 
+    width=0.67\textwidth, boxrule=0mm,
+    colback=kuru, colframe=kuru, % Colors
+    sharp corners,
+    underlay={%
+	    \fill[white] ([xshift=-2mm,yshift=3mm]frame.north west) -- ([yshift=1mm]frame.north east)
+	    -- ([xshift=1mm,yshift=-3mm]frame.south east) -- ([xshift=-1mm,yshift=-1mm]frame.south west)
+	    -- cycle;
+        },
+    % drop fuzzy shadow, % Shadow
+    title={#1},
+}
+
+\begin{logowhitebox}[]
+	\includegraphics[width=6cm]{assets/no_auto_compression/logo}
+\end{logowhitebox}
+
+\vspace*{1.28cm}
 
 \newtcolorbox{kuruboxfrontpage}[1][]{%
     enhanced,
     before skip=0mm,after skip=0mm, 
-    width=0.6\textwidth, boxrule=0mm,
+    width=0.7\textwidth, boxrule=0mm,
     colback=kuru, colframe=kuru, % Colors
     sharp corners,
     underlay={%
@@ -216,17 +234,16 @@
 \begin{kuruboxfrontpage}[]
 	\color{white}{\large\bfseries 1/2025 Kurkisuon Rusakot ry}
 \end{kuruboxfrontpage}
-% \contour{white}{\large\bfseries 1/2024 Kurkisuon Rusakot ry}
-\end{tabular}\par}
 
 \clearpage
 \restoregeometry
 \thispagestyle{plain}
 
-% \ThisULCornerWallPaper{1}{assets/no_auto_compression/sisäkansikuva.jpg}
+\ThisULCornerWallPaper{1}{assets/no_auto_compression/sisäkansikuva.jpg}
 
+{\color{white}
 \noindent \textbf{Tassu 1/2025} \\
-\noindent ISSN 2984-5556
+\noindent ISSN 2984-5556}
 
 \vfill
 
@@ -251,13 +268,9 @@ Kurkisuon Rusakot ry, Helsinki
 
 \medskip
 
-\noindent Etu- ja sisäkannen kuvat:
+\noindent Etu-, sisä- ja takakannen kuvat:
 
-xxx
-
-\noindent Takakannen kuva:
-
-xxx
+Tanguy Gérôme
 
 % \columnbreak
 \vspace{0.64cm}
@@ -279,14 +292,14 @@ xxx
 %Pending the interviews so commented for now. Move maybe to 2/2025.
 %\include{chapters/partiomenetelma.tex}
 \include{chapters/partioaakkoset.tex}
-\include{chapters/morse.tex}
+% \include{chapters/morse.tex}
 
 \include{chapters/elaintenJouluMeriharjussa.tex}
 \include{chapters/minihaikki.tex}
 \include{chapters/kevatjuhla.tex}
 
-% \include{chapters/kuvakilpailu.tex}
-% \include{chapters/kuvakilpailu.tex}
+\include{chapters/kuvakilpailu.tex}
+\include{chapters/neulekilpailu.tex}
 
 % \clearpage\section{Tulossa pian}
 
@@ -294,7 +307,8 @@ xxx
 \clearpage
 
 \thispagestyle{empty}
-% \ThisCenterWallPaper{1.07}{assets/no_auto_compression/takakansikuva.jpg}~
+\newgeometry{left=2cm,right=1cm,top=1cm,bottom=1cm}
+\ThisCenterWallPaper{1.07}{assets/no_auto_compression/takakansikuva.jpg}~
 
 \vfill
 
@@ -327,4 +341,6 @@ xxx
 		\end{center}
 	\end{addmargin}
 }
+
+
 \end{document}
