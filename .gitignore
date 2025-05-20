@@ -1,6 +1,9 @@
 #Saving pdf updates with every commit is quickly gonna make the repo heeaaaaavy
 *.pdf
 
+# when publishing the finished pdf, we want to save it
+!tassu.2025.1.pdf
+
 #Unwanted MacOS filed
 .DS_Store
 
